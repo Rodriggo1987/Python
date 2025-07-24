@@ -27,5 +27,4 @@
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/projetos-python-dados.git
-cd projetos-python-dados
+git clone https://github.com/.....
