@@ -1,6 +1,7 @@
 
-#🛠️ Etapas Realizadas#
-Ambiente e Sessão PySpark
+🛠️ ##Etapas Realizadas##
+
+1 - Ambiente e Sessão PySpark
 
 Instalação do PySpark (pip install pyspark).
 
@@ -8,7 +9,7 @@ Configuração das variáveis de ambiente para evitar conflitos de versão com o
 
 Criação da SparkSession com o nome PySpark_01.
 
-Leitura do Dataset
+2 - Leitura do Dataset
 
 Utilizado arquivo CSV com dados dos jogadores da Copa.
 
@@ -16,13 +17,13 @@ Leitura com spark.read.csv() utilizando header=True e inferSchema=True para dete
 
 Exibição inicial do conteúdo com df.show() e esquema com df.printSchema().
 
-Análise de Dados Nulos
+3 - Análise de Dados Nulos
 
 Conversão para Pandas para contagem de valores nulos: df.toPandas().isna().sum().
 
 Iteração com filter().count() para identificar colunas com valores nulos diretamente no PySpark.
 
-Tratamento de Dados
+4 - Tratamento de Dados
 
 Renomeação de colunas para remover caracteres especiais e facilitar o manuseio (ex: Pos. → Posicao, # → Numero, Club → Time).
 
