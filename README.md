@@ -1,5 +1,5 @@
 
-Etapas Realizadas
+#🛠️ Etapas Realizadas#
 Ambiente e Sessão PySpark
 
 Instalação do PySpark (pip install pyspark).
