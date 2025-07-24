@@ -1,29 +1,29 @@
 
-## 🧰 Bibliotecas Utilizadas
+Etapas Realizadas
+Ambiente e Sessão PySpark
 
-- [`pandas`](https://pandas.pydata.org/): Manipulação de dados tabulares (DataFrames)
-- [`pyspark`](https://spark.apache.org/docs/latest/api/python/): Processamento distribuído com Apache Spark
-- [`matplotlib`](https://matplotlib.org/): Criação de gráficos estáticos
-- [`seaborn`](https://seaborn.pydata.org/): Visualização estatística de dados
-- [`os`, `glob`, `datetime`, etc.](https://docs.python.org/3/): Módulos nativos do Python
+Instalação do PySpark (pip install pyspark).
 
-## 📌 Exemplos de Projetos
+Configuração das variáveis de ambiente para evitar conflitos de versão com o Python.
 
-### ✅ Projeto: Análise de Vendas
-- Leitura e limpeza de um dataset de vendas com `pandas`
-- Cálculo de métricas como faturamento total, ticket médio e agrupamento por produto
-- Geração de visualizações simples
+Criação da SparkSession com o nome PySpark_01.
 
-### ✅ Projeto: Transformações com PySpark
-- Leitura de arquivos `.parquet`
-- Uso de funções `withColumn`, `filter`, `groupBy` no PySpark
-- Exportação dos dados processados
+Leitura do Dataset
 
-### ✅ Projeto: Visualização de Resultados
-- Geração de gráficos de linha, barras e pizza
-- Customização de estilo com `seaborn`
+Utilizado arquivo CSV com dados dos jogadores da Copa.
 
-## 🧪 Como Executar os Projetos
+Leitura com spark.read.csv() utilizando header=True e inferSchema=True para detectar automaticamente os tipos de dados.
 
-1. Clone o repositório:
-```bash
+Exibição inicial do conteúdo com df.show() e esquema com df.printSchema().
+
+Análise de Dados Nulos
+
+Conversão para Pandas para contagem de valores nulos: df.toPandas().isna().sum().
+
+Iteração com filter().count() para identificar colunas com valores nulos diretamente no PySpark.
+
+Tratamento de Dados
+
+Renomeação de colunas para remover caracteres especiais e facilitar o manuseio (ex: Pos. → Posicao, # → Numero, Club → Time).
+
+Criação de novas colunas com nomes mais intuitivos e no padrão snake_case.
